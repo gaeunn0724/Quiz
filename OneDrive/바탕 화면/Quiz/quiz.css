@@ -91,6 +91,27 @@ body {
       cursor: pointer;
   }
 
-  .parents{
-    table-layout: fixed;
+  .total {
+    display: inline;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    color: #5AA7EB;
+    display: inline; 
   }
+
+  .total-score{
+    font-weight: bold;
+    font-size: 30px;
+    /* margin-left: 30px; */
+    color: #5AA7EB;
+    display: inline; 
+  }
+
+  .restart-btn {
+    border: 1px solid #5AA7EB;
+    padding: 10px 70px;
+    background-color: white;
+    cursor: pointer;
+    color: #5AA7EB;
+}
