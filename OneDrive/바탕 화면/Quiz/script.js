@@ -1,5 +1,5 @@
-var updateCnt = 1; //페이지 횟수 세기
-var nowCnt = 0;
+var updateCnt = 1; //업데이트 페이지 횟수 세기
+var nowCnt = 0; //
 var score = 0; //최종 점수
 
 function updatePage(){
@@ -9,9 +9,13 @@ function updatePage(){
     const p = document.querySelector('.question-p');
     const question = document.querySelector('.question');
     var meter = document.querySelector('.meter');
-    // $('.second-container').removeAttr("background-color");
 
     document.querySelector('.last-container').style.visibility = "hidden";
+    // 배경색 초기화
+    document.querySelector('.child1').style.backgroundColor = 'transparent';
+    document.querySelector('.child2').style.backgroundColor = 'transparent';
+    document.querySelector('.child3').style.backgroundColor = 'transparent';
+    document.querySelector('.child4').style.backgroundColor = 'transparent';
         
     switch (updateCnt){
         case 2: 
@@ -81,34 +85,49 @@ function updatePage(){
 }
 
 function checkAnswer(a){
-    
+    //1-1 2-3 3-2 4-4
     console.log("now"+ ++nowCnt);
     const sc = document.querySelector('.score');
-
+    var str = '.child'+a;
+    console.log(str);
     switch (nowCnt){
         case 1: 
             if(a === 1) {
                 score += 1; 
                 sc.innerHTML = score;
+                document.querySelector('.child1').style.backgroundColor = 'green';
+            } else {
+                document.querySelector(str).style.backgroundColor = 'red';
             }
-           
             break;
+
         case 2: 
             if(a === 3) {
                 score += 1; 
                 sc.innerHTML = score;
-            } 
+                document.querySelector('.child3').style.backgroundColor = 'green';
+            } else {
+                document.querySelector(str).style.backgroundColor = 'red';
+            }
             break;
+
         case 3: 
             if(a === 2) {
                 score += 1; 
                 sc.innerHTML = score;
+                document.querySelector('.child2').style.backgroundColor = 'green';
+            } else {
+                document.querySelector(str).style.backgroundColor = 'red';
             }
             break;
+            
         case 4: 
             if(a === 4) {
                 score += 1; 
                 sc.innerHTML = score;
+                document.querySelector('.child4').style.backgroundColor = 'green';
+            } else {
+                document.querySelector(str).style.backgroundColor = 'red';
             }
             break;
     }
