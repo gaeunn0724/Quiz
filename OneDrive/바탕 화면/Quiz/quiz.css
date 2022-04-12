@@ -54,12 +54,7 @@ body {
       margin-top: 20px;
       display: flex;
       align-items: center;
-     
   }
- 
-  .child1:visited, .child2:visited, .child3:visited, .child4:visited{
-    background-color: red;}
-
 
   .child1:hover, .child2:hover, .child3:hover, .child4:hover {
       box-shadow: 0 5px 15px #5AA7EB;

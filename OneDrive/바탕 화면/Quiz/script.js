@@ -1,5 +1,5 @@
 var updateCnt = 1; //업데이트 페이지 횟수 세기
-var nowCnt = 0; //
+var nowCnt = 0; //현재 페이지
 var score = 0; //최종 점수
 
 function updatePage(){
@@ -55,7 +55,7 @@ function updatePage(){
             document.querySelector('.child4').innerHTML.replace('5','6');
             break;
         
-            case 4: 
+        case 4: 
             p.innerHTML = "Question 4/4";
             question.innerHTML = "What is 7*2?"
             meter.value = 100;
@@ -79,7 +79,6 @@ function updatePage(){
             document.querySelector('.first-container').style.visibility = "hidden";
             document.querySelector('.second-container').style.visibility = "hidden";
             document.querySelector('.total-score').innerHTML = score;
-
     }
     ++updateCnt;
 }
@@ -99,6 +98,7 @@ function checkAnswer(a){
             } else {
                 document.querySelector(str).style.backgroundColor = 'red';
             }
+           
             break;
 
         case 2: 
@@ -120,7 +120,7 @@ function checkAnswer(a){
                 document.querySelector(str).style.backgroundColor = 'red';
             }
             break;
-            
+
         case 4: 
             if(a === 4) {
                 score += 1; 
@@ -133,7 +133,4 @@ function checkAnswer(a){
     }
 
     setTimeout(updatePage, 1000);
-
-
-    //todo 체크해서 점수 4번 후 마지막 페이지 
 }
